@@ -28,7 +28,7 @@ test:
   database: chimera_test
   pool: 5
   username: root
-  password:
+  password: qwerty
   socket: /var/lib/mysql/mysql.sock
 
 production:

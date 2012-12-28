@@ -11,6 +11,7 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem 'will_paginate'
+gem 'devise'
 
 group :development do
 	gem 'rspec-rails'
