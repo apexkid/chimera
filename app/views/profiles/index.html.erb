@@ -1,0 +1,16 @@
+<table class="profile" summary="Profile information">
+	<tr>
+		<td>
+			<h1> Your Profile </h1>
+			<h3> Name:  <%= @profile.name %></h3>
+			<p> Gender: <%= @profile.gender %> </p>
+			<h4> Mobile: <%= @profile.mobile %> </h4>
+			<h3> Address: </h3>
+			<h4> City: <%= @profile.city %> </h4>
+			<h4> State: <%= @profile.state %> </h4>
+			<h4> Country: <%= @profile.country %> </h4>
+			<p> Pin: <%= @profile.zip_code %> </p>
+			<p> <%= link_to "Edit Profile", profiles_edit_path %> </p>
+		</td>
+	</tr>	
+</table>

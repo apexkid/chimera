@@ -1,0 +1,25 @@
+<h2> Fill in your profile information </h2>
+
+<%= form_for(@profile) do |p| %>
+	<%= render 'shared/error_messages',:object => p.object %>
+
+	<div class="field">
+		<%= p.label :name, 'Name' %> <br/>
+		<%= p.text_field :name %>
+	</div>
+
+	<div class="field">
+		<%= p.label :mobile, 'Mobile Num' %> <br/>
+		<%= p.text_field :mobile %>
+	</div>
+
+	<div class="field">
+		<%= p.label :city, 'City' %> <br/>
+		<%= p.text_field :city %>
+	</div>
+
+	<div class="actions">
+		<%= p.submit "Update" %>
+	</div>
+<% end %>
+	

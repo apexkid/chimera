@@ -1,0 +1,47 @@
+<h1>Edit your profile</h1>
+
+<%= form_for(@profile) do |p| %>
+	<%= render 'shared/error_messages',
+		:object => p.object %>
+
+	<div class="field">
+		<%= p.label :name %><br />
+		<%= p.text_field :name %>
+	</div>
+
+	<h4> Gender: </h4>
+	<div class="radio">
+		<%= p.radio_button :gender, "Male" %> MALE
+		<%= p.radio_button :gender, "Female" %> FEMALE
+	</div>
+
+	<div class="field">
+		<%= p.label :mobile %><br />
+		<%= p.text_field :mobile %>
+	</div>
+
+	<h4> Address- </h4>
+	<div class="field">
+		<%= p.label :country %><br />
+		<%= p.text_field :country %>
+	</div>
+
+	<div class="field">
+		<%= p.label :state %><br />
+		<%= p.text_field :state %>
+	</div>
+
+	<div class="field">
+		<%= p.label :city %><br />
+		<%= p.text_field :city %>
+	</div>
+
+	<div class="field">
+		<%= p.label :zip_code %><br />
+		<%= p.text_field :zip_code %>
+	</div>
+	
+	<div class="actions">
+		<%= p.submit "Update" %>
+	</div>
+<% end %>
