@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20121231155508) do
     t.string   "name"
     t.datetime "dob"
     t.string   "city"
-    t.integer  "mobile"
+    t.string   "mobile"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "add_column"

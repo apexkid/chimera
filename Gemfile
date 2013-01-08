@@ -12,6 +12,7 @@ gem 'therubyracer'
 
 gem 'will_paginate'
 gem 'devise'
+gem 'bootstrap-sass'
 
 group :development do
 	gem 'rspec-rails'

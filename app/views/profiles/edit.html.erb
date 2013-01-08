@@ -42,6 +42,11 @@
 	</div>
 	
 	<div class="actions">
-		<%= p.submit "Update" %>
+		<%= p.submit "Update" , :class => "btn btn-primary btn-large" %>
 	</div>
 <% end %>
+<hr/>
+    <li>
+    <%= link_to('Edit account', edit_user_registration_path) %>
+    </li>
+    <hr/>

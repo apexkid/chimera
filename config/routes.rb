@@ -3,7 +3,7 @@ Chimera::Application.routes.draw do
 
   match "/profiles/edit" => "profiles#edit"
 
-  resources :profiles, :only => [:index, :show, :update]
+  resources :profiles, :only => [:index, :show, :update, :create]
 
   #get "pages/home"
 
