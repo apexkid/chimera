@@ -11,8 +11,8 @@
 
 	<h4> Gender: </h4>
 	<div class="radio">
-		<%= p.radio_button :gender, "Male" %> MALE
-		<%= p.radio_button :gender, "Female" %> FEMALE
+	<%= p.radio_button :gender, "Male" %> MALE <br/>
+	<%= p.radio_button :gender, "Female" %> FEMALE
 	</div>
 
 	<div class="field">
@@ -42,7 +42,7 @@
 	</div>
 	
 	<div class="actions">
-		<%= p.submit "Update" , :class => "btn btn-primary btn-large" %>
+		<%= p.submit "Update" , :class => "btn btn-success" %>
 	</div>
 <% end %>
 <hr/>

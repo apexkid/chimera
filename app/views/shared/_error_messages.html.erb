@@ -1,14 +1,13 @@
 <% if object.errors.any? %>
-	<div id="error_explanation">
-		<h2><%= pluralize(object.errors.count, "error") %>
-			prohibited this user from being saved:
-		</h2>
-		
-		<p>There were problems with the following fields:</p>
+	<div id="error_explanation" class="alert alert-error"> 
+		 <a class="close" data-dismiss="alert">&#215;</a>
+		 <span class="badge badge-warning"> <%= pluralize(object.errors.count, "error") %> found :</span>
+		 <p>There were problems with the following fields:</p>
 		<ul>
 			<% object.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>
 		</ul>
+
 	</div>
 <% end %>
