@@ -1,4 +1,5 @@
 <table class="profile" summary="Profile information">
+	<% @user = @profile.user %>
 	<tr>
 		<td>
 			<h3> Name:  <%= @profile.name %></h3>
@@ -9,6 +10,20 @@
 			<h4> State: <%= @profile.state %> </h4>
 			<h4> Country: <%= @profile.country %> </h4>
 			<p> Pin: <%= @profile.zip_code %> </p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= render 'shared/stats' %>
+			<%= link_to "See friends", user_friends_path(@user) %> 
+			<%= link_to "See subscriptions", user_subscribers_path(@user) %> 
+		</td>
+		<td>
+			
+			<% unless current_user == @user %>
+				<%= render 'relationships/relation_form' %>
+				<%= render 'relationships/subscriber_form' %>
+			<% end %>
 		</td>
 	</tr>
 </table>

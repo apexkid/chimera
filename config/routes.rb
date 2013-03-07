@@ -1,9 +1,15 @@
 Chimera::Application.routes.draw do
   devise_for :users
 
-  match "/profiles/edit" => "profiles#edit"
+  resources :users do
+    resources :friends, :only => [:index, :create, :destroy]
+    resources :subscribers, :only => [:index, :create, :destroy]
+  end
+
+  resources :friendrequests, :only =>[:index, :create, :destroy]
 
   resources :profiles, :only => [:index, :show, :update]
+  match "/profiles/edit" => "profiles#edit"
 
   #get "pages/home"
 

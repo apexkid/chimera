@@ -11,6 +11,14 @@
 			<h4> Country: <%= @profile.country %> </h4>
 			<p> Pin: <%= @profile.zip_code %> </p>
 			<p> <%= link_to "Edit Profile", profiles_edit_path %> </p>
+			<p> <%= link_to "MyUrl", @profile %> </p>
 		</td>
-	</tr>	
+	</tr>
+	<tr>
+		<td>
+			<%= render 'shared/stats' %>
+			<%= link_to "See friends", user_friends_path(@user) %> 
+			<%= link_to "See subscriptions", user_subscribers_path(@user) %> 
+		</td>
+	</tr>
 </table>
