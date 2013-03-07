@@ -1,0 +1,23 @@
+<h1> Friends :D </h1>
+
+<% if !@friends.empty? %>
+	Your friends::
+	<% @friends.each do |friend| %>
+		<h6> <%= friend.profile.name %> </h6>
+	<% end %>
+<% else %>
+	<h2> You have no current friends </h2>
+<% end %>
+<br/>
+
+<%if !@requested_friends.empty? %>
+	Requested Friends::P
+<% end %>
+<br/>
+
+<%if !@pending_friends.empty? %>
+	Pending Friends::
+	<% @pending_friends.each do |friend| %>
+		<h6> <%= friend.profile.name %> </h6>
+	<% end %>
+<% end %>

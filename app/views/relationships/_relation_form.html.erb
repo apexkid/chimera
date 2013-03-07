@@ -1,0 +1,14 @@
+<% if current_user.isrequestedfriends?(@user) %>
+	
+	<%= render :partial => "relationships/accept_friend_request", :locals => {:user => @user } %>
+	<%= render :partial => "relationships/reject_friend_request", :locals => {:user => @user } %>
+<% elsif current_user.ispendingfriends?(@user) %>
+	
+	<%= render :partial => "relationships/cancel_friend_request", :locals => {:user => @user } %>
+<% elsif current_user.isfriends?(@user) %>
+	
+	<%= render :partial => "relationships/unfriend", :locals => {:user => @user } %> 
+<% else %>
+	
+	<%= render :partial => "relationships/send_friend_request", :locals => {:user => @user } %>
+<% end %>

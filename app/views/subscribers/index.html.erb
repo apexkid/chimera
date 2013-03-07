@@ -1,0 +1,21 @@
+<h1> Subscriptions </h1>
+
+<% if !@followers.empty? %>
+	Your Followers
+	<% @followers.each do |follower| %>
+		<h6> <%= follower.profile.name %> </h6>
+	<% end %>
+<% else %>
+	<h2> You have no followers </h2>
+<% end %>
+<br/>
+
+
+<%if !@following.empty? %>
+	You are currently following:
+	<% @following.each do |follow| %>
+		<h6> <%= follow.profile.name %> </h6>
+	<% end %>
+<% else %>
+	<h2> You are not following anything </h2>
+<% end %>

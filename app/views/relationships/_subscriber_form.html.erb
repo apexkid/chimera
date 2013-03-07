@@ -1,0 +1,5 @@
+<% if current_user.isfollowing?(@user) %>
+	<%= render :partial => "relationships/unfollow", :locals => {:user => @user } %>
+<% else %>
+	<%= render :partial => "relationships/follow", :locals => {:user => @user } %>
+<% end %>

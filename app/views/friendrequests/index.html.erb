@@ -1,0 +1,13 @@
+<h2> Recieved friend requests :P </h2>
+
+<%if !@received_friend_requests.empty? %>
+	Requested Friends::
+	<% @received_friend_requests.each do |friend| %>
+		<h6> <%= friend.profile.name %> </h6>
+		<%= render :partial => "relationships/accept_friend_request", :locals => {:user => friend } %>
+		<%= render :partial => "relationships/reject_friend_request", :locals => {:user => friend } %>
+	<% end %>
+<% else %>
+	<p> You have no pending friend requsts </p>
+<% end %>
+<br/>

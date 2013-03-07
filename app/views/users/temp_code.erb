@@ -1,0 +1,12 @@
+<%= form_for (current_user.relationships.find_by_friend_id(@profile.user) || current_user.reverse_relationships.find_by_user_id(@profile.user)) , 
+	:html => { :method => :delete }  do |f| %>
+	<div class="actions"><%= f.submit "Unfriend"%></div>
+<% end %>
+
+
+<%= form_for current_user.relationships.build(:friend_id => @profile.user.id) do |f| %>
+	<div> <%= f.hidden_field :friend_id %> 
+	</div>
+
+	<div class="actions"> <%= f.submit "Add Friend" %> </div>
+<% end %>
