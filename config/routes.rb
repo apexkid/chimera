@@ -6,10 +6,10 @@ Chimera::Application.routes.draw do
     resources :subscribers, :only => [:index, :create, :destroy]
   end
 
-  resources :friendrequests, :only =>[:index, :create, :destroy]
-
-  resources :profiles, :only => [:index, :show, :update]
   match "/profiles/edit" => "profiles#edit"
+  resources :profiles, :only => [:index, :show, :update]
+
+  resources :friendrequests, :only =>[:index, :create, :destroy]
 
   #get "pages/home"
 
