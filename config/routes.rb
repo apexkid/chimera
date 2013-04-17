@@ -7,7 +7,7 @@ Chimera::Application.routes.draw do
   end
 
   match "/profiles/edit" => "profiles#edit"
-  resources :profiles, :only => [:index, :show, :update]
+  resources :profiles, :only => [:create, :index, :show, :update]
 
   resources :friendrequests, :only =>[:index, :create, :destroy]
 

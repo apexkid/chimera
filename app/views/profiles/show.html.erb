@@ -14,9 +14,8 @@
 	</tr>
 	<tr>
 		<td>
-			<%= render 'shared/stats' %>
-			<%= link_to "See friends", user_friends_path(@user) %> 
-			<%= link_to "See subscriptions", user_subscribers_path(@user) %> 
+			<span class="badge badge-success"><%= render 'shared/statsFriend' %> </span> <%= link_to "See friends", user_friends_path(@user) %>  <br/>
+			<span class="badge badge-info"><%= render 'shared/statsSubscribers' %> </span> <%= link_to "See subscriptions", user_subscribers_path(@user) %> 
 		</td>
 		<td>
 			

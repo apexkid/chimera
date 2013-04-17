@@ -9,7 +9,8 @@ gem 'mysql2'
 
 gem 'execjs'
 gem 'therubyracer'
-
+gem "twitter-bootstrap-rails"
+gem "less-rails"
 gem 'will_paginate'
 gem 'devise'
 
